@@ -1,0 +1,10 @@
+.decode textarea{
+    background-color: #758173;
+    width: 25em;
+    height: 10em;
+}
+
+.decode{
+    font-size: 16px;
+    text-align: center;
+}
