@@ -7,8 +7,8 @@ const Result = (props) => {
     return (
         <>
             <div className="encodetext">
-                <h1>Output</h1>
-                <h3>{encode(props.value)}</h3>
+                <h1>Encode output</h1>
+                <p>{encode(props.value)}</p>
             </div>
         </>
     )

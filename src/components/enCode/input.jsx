@@ -10,7 +10,7 @@ const Input = (props) => {
         <div className="encode">
             <textarea value={props.value}
                 onChange={handleText}
-                placeholder="Insert your message :D"
+                placeholder="Encode option"
             />
         </div>
     )

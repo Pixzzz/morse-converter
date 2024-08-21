@@ -1,12 +1,13 @@
 import React from "react";
 import { decode } from 'morsee'
+import './decode.css'
 
 const deCodeResult = (props) => {
     return (
         <>
             <div className="decodetext">
-                <h1>De code output </h1>
-                <h3>{decode(props.value)}</h3>
+                <h1>Decode output  </h1>
+                <p>{decode(props.value)}</p>
             </div>
         </>
     )

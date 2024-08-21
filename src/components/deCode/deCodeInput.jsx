@@ -9,7 +9,7 @@ const deCodeInput = (props) => {
         <div className="decode">
             <textarea value={props.value}
                 onChange={handleText}
-                placeholder="Insert the morse code here :)"
+                placeholder="Decode input"
             />
         </div>
     )

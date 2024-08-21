@@ -2,9 +2,11 @@
     background-color: #758173;
     width: 25em;
     height: 10em;
+    padding: 15px;
 }
 
-.decode{
+.decodetext{
     font-size: 16px;
     text-align: center;
 }
+
