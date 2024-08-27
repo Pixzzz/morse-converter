@@ -1,10 +1,10 @@
 import { useState } from 'react'
 //-----------------------------
-import Input from './components/enCode/input'
-import Result from './components/enCode/result'
+import mainPageContainer from './components/pages/mainPage/mainPageContainer'
 //-----------------------------
-import DeCodeInput from './components/deCode/deCodeInput'
-import DeCodeResult from './components/deCode/deCodeResult'
+import secondPageContianer from './components/pages/secondPage/secondPageContianer'
+//-----------------------------
+import { BrowserRouter, Routes, Route } from 'react-router-dom'
 //-----------------------------
 import './App.css'
 
@@ -16,15 +16,15 @@ function App() {
 
   return (
     <>
-      <div className='enCode'>
-        <Input value={value} setValue={setValue} />
-        <Result value={value} />
-      </div>
+      
 
-      <div className='deCode'>
-        <DeCodeInput value={DeCodeValue} setValue={setDeCodeValue} />
-        <DeCodeResult value={DeCodeValue} />
-      </div>
+      <BrowserRouter>
+        <Routes>
+          <Route path='/enCode' element={mainPageContainer} />
+          <Route path='/deCode' element={secondPageContianer} />
+        </Routes>
+      </BrowserRouter>
+
     </>
   )
 }
