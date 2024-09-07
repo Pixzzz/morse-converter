@@ -1,7 +1,9 @@
+import React, { useState } from 'react'
 import Input from '../../../components/enCode/input'
 import Result from '../../../components/enCode/result'
 
 const mainPageContainer = () => {
+    const [value, setValue] = useState('')
     return (
         <>
             <div className='enCode'>
