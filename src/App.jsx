@@ -14,21 +14,21 @@ const Layout = () => {
 
   useEffect(() => {
     if (loc.pathname === '/') {
-      setLink('deCode')
-    } else if (loc.pathname === 'deCode') {
+      setLink('de Code page')
+    } else if (loc.pathname === '/deCode') {
       setLink('Main page')
     }
   }, [loc])
 
   return (
     <nav>
-      <Link to={loc.pathname === '/' ? '/deCode' : '/'}>{link}</Link>
+      <Link className='ChangePage' to={loc.pathname === '/' ? '/deCode' : '/'}>{link}</Link>
     </nav>
   )
 }
 
 function App() {
- 
+
 
   return (
     <>
@@ -37,7 +37,7 @@ function App() {
           <Route path='/' element={<MainPageContainer />} />
           <Route path='/deCode' element={<SecondPageContianer />} />
         </Routes>
-        <Layout/>
+        <Layout />
       </BrowserRouter>
 
     </>

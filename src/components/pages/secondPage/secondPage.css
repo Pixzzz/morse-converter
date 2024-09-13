@@ -6,12 +6,6 @@
     color: #FFFFFF;
 }
 
-div {
-    display: grid;
-    margin-top: 15px;
-    justify-content: center;
-    align-items: center;
-}
 
 ::placeholder {
     color: white;
