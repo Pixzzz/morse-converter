@@ -1,30 +1,45 @@
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 //-----------------------------
-import Input from './components/enCode/input'
-import Result from './components/enCode/result'
+import MainPageContainer from './components/pages/mainPage/mainPageContainer'
 //-----------------------------
-import DeCodeInput from './components/deCode/deCodeInput'
-import DeCodeResult from './components/deCode/deCodeResult'
+import SecondPageContianer from './components/pages/secondPage/secondPageContianer'
+//-----------------------------
+import { BrowserRouter, Routes, Route, Link, useLocation } from 'react-router-dom'
 //-----------------------------
 import './App.css'
 
+const Layout = () => {
+  const loc = useLocation()
+  const [link, setLink] = useState('deCode')
 
+  useEffect(() => {
+    if (loc.pathname === '/') {
+      setLink('de Code page')
+    } else if (loc.pathname === '/deCode') {
+      setLink('Main page')
+    }
+  }, [loc])
+
+  return (
+    <nav>
+      <Link className='ChangePage' to={loc.pathname === '/' ? '/deCode' : '/'}>{link}</Link>
+    </nav>
+  )
+}
 
 function App() {
-  const [value, setValue] = useState('')
-  const [DeCodeValue, setDeCodeValue] = useState('')
+
 
   return (
     <>
-      <div className='enCode'>
-        <Input value={value} setValue={setValue} />
-        <Result value={value} />
-      </div>
+      <BrowserRouter>
+        <Routes>
+          <Route path='/' element={<MainPageContainer />} />
+          <Route path='/deCode' element={<SecondPageContianer />} />
+        </Routes>
+        <Layout />
+      </BrowserRouter>
 
-      <div className='deCode'>
-        <DeCodeInput value={DeCodeValue} setValue={setDeCodeValue} />
-        <DeCodeResult value={DeCodeValue} />
-      </div>
     </>
   )
 }

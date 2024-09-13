@@ -24,3 +24,14 @@ div {
   justify-content: start;
   align-items: start;
 }
+
+.ChangePage {
+  text-align: center;
+  text-decoration: none;
+  position: absolute;
+  right: 900px;
+  padding: 10px;
+  width: 100px;
+  background-color: rgb(41, 39, 39);
+  border-radius: 10px;
+}
