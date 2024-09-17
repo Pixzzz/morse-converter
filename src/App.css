@@ -35,3 +35,51 @@ div {
   background-color: rgb(41, 39, 39);
   border-radius: 10px;
 }
+
+
+@media (max-width: 1200px) {
+  .ChangePage {
+    right: 700px;
+  }
+}
+
+@media (max-width: 900px) {
+  .ChangePage {
+    right: 500px;
+    width: 80px;
+  }
+}
+
+@media (max-width: 768px) {
+  .ChangePage {
+    right: auto;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100px;
+    padding: 8px;
+  }
+
+  .textBox {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .ChangePage {
+    width: 80px;
+    padding: 6px;
+    font-size: 14px;
+  }
+
+  .textBox {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  div {
+    margin-top: 10px;
+  }
+}
